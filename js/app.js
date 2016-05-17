@@ -8,3 +8,13 @@ angularApp.config(function ($routeProvider){
   })
 });
 
+
+angularApp.controller("MatchController",function($resource){
+  var vm=this;
+  vm.getMatchDetails = function(){
+    console.log(vm.MatchDetails);
+    var cricResult = $resource(});
+    vm.cricResult = cricResult.get();
+    console.log(vm.cricResult);
+   }
+});
