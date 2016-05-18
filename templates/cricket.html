@@ -12,10 +12,12 @@
     Current Matches :
     <div class="row" ng-repeat="data in vm.cricketData">
       <div class="col-xs-8 col-sm-6">
-        Match Venue :{{data.description}}
+      <div class="well" style="min-height:140px;max-height:200px;overflow:hidden;">
+		{{data.description}}
+      </div>
       </div>
       <div class="col-xs-4 col-sm-6">
-        <!-- Description :{{data.title}} -->
+        <!-- {{data.score}} -->
       </div>
     </div>
   </div>

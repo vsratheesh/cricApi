@@ -21,5 +21,5 @@ angularApp.controller("MatchController",function($resource){
       console.log(error);
     });
   };
-vm.getMatchDetails();
+  vm.getMatchDetails();
 });
