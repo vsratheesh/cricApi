@@ -7,13 +7,13 @@
     </div>
   </div>
 </nav>
-<div class="row" ng-controller="MatchController as vm">
+<div class="row">
   <div class="col-sm-9">
     Current Matches :
     <div class="row" ng-repeat="data in vm.cricketData">
       <div class="col-xs-8 col-sm-6">
       <div class="well" style="min-height:140px;max-height:200px;overflow:hidden;">
-		{{data.description}}
+		<a href="#/ScoreCards/{{data.unique_id}}">{{data.description}}</a>
       </div>
       </div>
       <div class="col-xs-4 col-sm-6">
