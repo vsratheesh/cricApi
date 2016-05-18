@@ -12,9 +12,14 @@ angularApp.config(function ($routeProvider){
 angularApp.controller("MatchController",function($resource){
   var vm=this;
   vm.getMatchDetails = function(){
-    console.log(vm.MatchDetails);
-    var cricResult = $resource(});
+    var cricResult = $resource('http://cricapi.com/api/cricket');
     vm.cricResult = cricResult.get();
-    console.log(vm.cricResult);
-   }
+    vm.cricResult.$promise.then(function(result){
+      vm.cricketData = result.data;
+      console.log(vm.cricketData);
+    }, function(error){
+      console.log(error);
+    });
+  };
+vm.getMatchDetails();
 });
